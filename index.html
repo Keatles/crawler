@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script src="vue.js">
+
+    </script>
+    <div id="app">
+        <p>{{message}}</p>
+        <button v-on:click="split">split message</button>
+    </div>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+            message:"hello vue.js"
+            },
+            methods:{
+                split:function(){
+                    this.message = this.message.split('').sort().join('');
+                }
+            }
+        })
+        var str = "hello";
+        console.log(str.split(''));
+        function factorialize(num) {
+            if(num<1){
+                return 1;
+            }else{
+                return factorialize(num-1)*num;
+            }
+            num.reverse
+        }
+
+        console.log(factorialize(5));
+    </script>
+
+</body>
+</html>
